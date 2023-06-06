@@ -1,7 +1,7 @@
 import 'dart:convert';
-import 'dart:io';
 
 import 'package:dio/dio.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:tutorial_delivery/common/components/custom_text_form_field.dart';
 import 'package:tutorial_delivery/common/const/colors.dart';
@@ -28,7 +28,9 @@ class _LoginScreenState extends State<LoginScreen> {
     const emulatorIp = '10.0.2.2';
     const simulatorIp = '127.0.0.1:3000';
 
-    final ip = Platform.isIOS ? simulatorIp : emulatorIp;
+    final ip = defaultTargetPlatform == TargetPlatform.android
+        ? emulatorIp
+        : simulatorIp;
 
     return DefaultLayout(
       child: SingleChildScrollView(
