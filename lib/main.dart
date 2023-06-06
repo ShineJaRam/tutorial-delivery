@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tutorial_delivery/common/view/splash_screen.dart';
 import 'package:tutorial_delivery/user/view/login_screen.dart';
 
 void main() {
@@ -19,7 +20,7 @@ class _App extends StatelessWidget {
         fontFamily: 'NotoSans',
         primarySwatch: Colors.blue,
       ),
-      home: LoginScreen(),
+      home: SplashScreen(),
     );
   }
 }
